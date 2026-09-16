@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twisty Threads | Handmade Crochets & Crafts</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand-box">
+            <img src="images/image1.jpg" alt="Logo" class="nav-logo">
+            <span class="nav-brand">Twisty Threads</span>
+        </div>
+        
+        <!-- Desktop Nav -->
+        <nav class="nav-links">
+            <button class="nav-btn active" onclick="showPage('home')">Home</button>
+            <button class="nav-btn" onclick="showPage('crochets')">Crochets</button>
+            <button class="nav-btn" onclick="showPage('pipe-cleaners')">Pipe Cleaners</button>
+            <button class="nav-btn" onclick="showPage('contact')">Contact</button>
+        </nav>
+
+        <!-- Mobile Hamburger Menu -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Slide-Out Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-brand">Twisty Threads</span>
+            <button class="close-sidebar" id="closeSidebar">&times;</button>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="sidebar-link active" onclick="showPage('home')">Home</button>
+            <button class="sidebar-link" onclick="showPage('crochets')">Crochets</button>
+            <button class="sidebar-link" onclick="showPage('pipe-cleaners')">Pipe Cleaners</button>
+            <button class="sidebar-link" onclick="showPage('contact')">Contact</button>
+        </nav>
+    </aside>
+
+    <!-- MAIN VIEWPORT -->
+    <main class="app-viewport">
+
+        <!-- PAGE 1: HOME PAGE -->
+        <section id="home" class="page-section active">
+            <div class="hero-wrapper">
+                
+                <!-- Centered Logo Box -->
+                <div class="hero-logo-center-box">
+                    <img src="images/image1.jpg" alt="Twisty Threads Logo" class="hero-logo">
+                </div>
+
+                <div class="hero-text-content">
+                    <h1 class="hero-title">Twisty Threads</h1>
+                    <p class="hero-bio">
+                        Handmade with care and attention to detail. We craft cute crochet plushies, flowers, keychains, and pipe cleaner creations to bring warmth to your day.
+                    </p>
+
+                    <!-- Lovely Welcome Notes & Customization Banner -->
+                    <div class="home-notes-container">
+                        <div class="note-card">
+                            <p class="note-title">Crafted Just For You</p>
+                            <p class="note-desc">Every piece is lovingly hand-knitted and shaped using soft, premium quality yarns and materials.</p>
+                        </div>
+
+                        <div class="note-card highlight-note">
+                            <p class="note-title">For Customization & Personal Requests</p>
+                            <p class="note-desc">Want a specific color, custom size, or unique design? Contact us directly and we'll create it for you!</p>
+                        </div>
+                    </div>
+
+                    <!-- Direct Ordering & Contact Numbers -->
+                    <div class="hero-actions">
+                        <a href="https://instagram.com/shop.twistythreads" target="_blank" class="btn btn-insta">
+                            Order on Instagram
+                        </a>
+                        <a href="https://wa.me/917792018098" target="_blank" class="btn btn-wa">
+                            WhatsApp (Crochets: +91 77920 18098)
+                        </a>
+                        <a href="https://wa.me/919413948673" target="_blank" class="btn btn-wa">
+                            WhatsApp (Pipe Cleaners: +91 94139 48673)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-showcase-box">
+                    <div class="showcase-frame">
+                        <img src="images/image2.jpg" alt="Twisty Threads Craft Showcase" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: CROCHETS GRID -->
+        <section id="crochets" class="page-section">
+            <div class="catalog-container">
+                <div class="section-header">
+                    <h2>Crochet Collection</h2>
+                    <p>Hand-knitted plushies, flowers, and keychains crafted with soft yarn.</p>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card" onclick="openProductDetail('crochet', 1)">
+                        <div class="card-img-box"><img src="crochets/crochet1.jpg" alt="Crochet Item 1"></div>
+                        <div class="card-info"><p class="price">₹399</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 2)">
+                        <div class="card-img-box"><img src="crochets/crochet2.jpg" alt="Crochet Item 2"></div>
+                        <div class="card-info"><p class="price">₹999</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 3)">
+                        <div class="card-img-box"><img src="crochets/crochet3.jpg" alt="Crochet Item 3"></div>
+                        <div class="card-info"><p class="price">₹300</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 4)">
+                        <div class="card-img-box"><img src="crochets/crochet4.jpg" alt="Crochet Item 4"></div>
+                        <div class="card-info"><p class="price">₹849</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 5)">
+                        <div class="card-img-box"><img src="crochets/crochet5.jpg" alt="Crochet Item 5"></div>
+                        <div class="card-info"><p class="price">₹139</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 6)">
+                        <div class="card-img-box"><img src="crochets/crochet6.jpg" alt="Crochet Item 6"></div>
+                        <div class="card-info"><p class="price">₹349</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 7)">
+                        <div class="card-img-box"><img src="crochets/crochet7.jpg" alt="Crochet Item 7"></div>
+                        <div class="card-info"><p class="price">₹1,499</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 8)">
+                        <div class="card-img-box"><img src="crochets/crochet8.jpg" alt="Crochet Item 8"></div>
+                        <div class="card-info"><p class="price">₹249</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 9)">
+                        <div class="card-img-box"><img src="crochets/crochet9.jpg" alt="Crochet Item 9"></div>
+                        <div class="card-info"><p class="price">₹899</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 10)">
+                        <div class="card-img-box"><img src="crochets/crochet10.jpg" alt="Crochet Item 10"></div>
+                        <div class="card-info"><p class="price">₹99</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 11)">
+                        <div class="card-img-box"><img src="crochets/crochet11.jpg" alt="Crochet Item 11"></div>
+                        <div class="card-info"><p class="price">₹149</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 12)">
+                        <div class="card-img-box"><img src="crochets/crochet12.jpg" alt="Crochet Item 12"></div>
+                        <div class="card-info"><p class="price">₹199</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('crochet', 13)">
+                        <div class="card-img-box"><img src="crochets/crochet13.jpg" alt="Crochet Item 13"></div>
+                        <div class="card-info"><p class="price">₹299</p><button class="card-btn">View Item</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: PIPE CLEANERS GRID -->
+        <section id="pipe-cleaners" class="page-section">
+            <div class="catalog-container">
+                <div class="section-header">
+                    <h2>Pipe Cleaner Collection</h2>
+                    <p>Vibrant and long-lasting floral and animal creations.</p>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 1)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner1.jpg" alt="Pipe Cleaner Item 1"></div>
+                        <div class="card-info"><p class="price">₹750</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 2)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner2.jpg" alt="Pipe Cleaner Item 2"></div>
+                        <div class="card-info"><p class="price">₹350</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 3)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner3.jpg" alt="Pipe Cleaner Item 3"></div>
+                        <div class="card-info"><p class="price">₹179</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 4)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner4.jpg" alt="Pipe Cleaner Item 4"></div>
+                        <div class="card-info"><p class="price">₹149</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 5)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner5.jpg" alt="Pipe Cleaner Item 5"></div>
+                        <div class="card-info"><p class="price">₹159</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 6)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner6.jpg" alt="Pipe Cleaner Item 6"></div>
+                        <div class="card-info"><p class="price">₹99</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 7)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner7.jpg" alt="Pipe Cleaner Item 7"></div>
+                        <div class="card-info"><p class="price">₹119</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 8)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner8.jpg" alt="Pipe Cleaner Item 8"></div>
+                        <div class="card-info"><p class="price">₹159</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 9)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner9.jpg" alt="Pipe Cleaner Item 9"></div>
+                        <div class="card-info"><p class="price">₹199</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 10)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner10.jpg" alt="Pipe Cleaner Item 10"></div>
+                        <div class="card-info"><p class="price">₹110</p><button class="card-btn">View Item</button></div>
+                    </div>
+                    <div class="product-card" onclick="openProductDetail('pipeCleaner', 11)">
+                        <div class="card-img-box"><img src="pipe cleaners/pipeCleaner11.jpg" alt="Pipe Cleaner Item 11"></div>
+                        <div class="card-info"><p class="price">₹99</p><button class="card-btn">View Item</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: SHARED FULL PRODUCT DETAIL VIEW -->
+        <section id="product-detail" class="page-section">
+            <div class="detail-container">
+                <button id="backBtn" class="back-btn" onclick="goBackToCategory()">&#8592; Back to Collection</button>
+                
+                <div class="detail-card">
+                    <div class="detail-media-wrapper">
+                        <img id="detailImage" src="" alt="Product Detail" class="detail-media-item">
+                        <video id="detailVideo" controls class="detail-media-item" style="display: none;"></video>
+                    </div>
+
+                    <div id="detailPriceTag" class="detail-price-tag"></div>
+
+                    <div id="gallerySection" class="gallery-section">
+                        <h4>More Views & Preview Clips</h4>
+                        <div id="detailGallery" class="detail-gallery-grid"></div>
+                    </div>
+
+                    <div class="detail-contact-box">
+                        <h3>Love this item? Let's talk!</h3>
+                        <div class="detail-actions">
+                            <a id="detailInstaBtn" href="https://instagram.com/shop.twistythreads" target="_blank" class="btn btn-insta">
+                                Contact us Instagram - shop.twistythreads
+                            </a>
+                            <a id="detailWaBtn" href="#" target="_blank" class="btn btn-wa">
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: CONTACT -->
+        <section id="contact" class="page-section">
+            <div class="contact-container">
+                <h2>Let's Get In Touch</h2>
+                <p>Have custom ideas, bulk orders, or questions? Send us a message!</p>
+                
+                <div class="contact-cards-wrapper">
+                    <!-- Pink Instagram Direct Message Tile -->
+                    <a href="https://instagram.com/shop.twistythreads" target="_blank" class="contact-tile insta-tile">
+                        <span class="tile-title">Instagram Direct Message</span>
+                        <span class="tile-handle">@shop.twistythreads</span>
+                    </a>
+
+                    <!-- Green WhatsApp Contact Tiles -->
+                    <a href="https://wa.me/917792018098" target="_blank" class="contact-tile wa-tile">
+                        <span class="tile-title">WhatsApp Support (Crochets)</span>
+                        <span class="tile-handle">+91 77920 18098</span>
+                    </a>
+
+                    <a href="https://wa.me/919413948673" target="_blank" class="contact-tile wa-tile">
+                        <span class="tile-title">WhatsApp Support (Pipe Cleaners)</span>
+                        <span class="tile-handle">+91 94139 48673</span>
+                    </a>
+                </div>
+                <p class="copyright">&copy; Twisty Threads. All rights reserved.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
