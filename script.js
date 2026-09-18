@@ -20,7 +20,6 @@ const crochetData = {
             { type: 'video', src: 'crochets/crochet4.5.mp4' }
         ] 
     },
-    5: { price: "₹139", subMedia: [{ type: 'image', src: 'crochets/crochet5.1.jpg' }] },
     6: { 
         price: "₹349", 
         subMedia: [
@@ -33,13 +32,37 @@ const crochetData = {
     7: { price: "₹1,499", subMedia: [{ type: 'image', src: 'crochets/crochet7.1.jpg' }] },
     8: { price: "₹249", subMedia: [{ type: 'image', src: 'crochets/crochet8.1.jpg' }] },
     9: { price: "₹899", subMedia: [{ type: 'image', src: 'crochets/crochet9.1.jpg' }] },
-    10: { price: "₹99", subMedia: [] },
-    11: { price: "₹149", subMedia: [] },
+    10: { 
+        price: "₹119", 
+        baseImg: 'crochets/crochet10.1.jpg',
+        subMedia: [
+            { type: 'image', src: 'crochets/crochet10.2.jpg' },
+            { type: 'image', src: 'crochets/crochet10.3.jpg' },
+            { type: 'image', src: 'crochets/crochet10.4.jpg' }
+        ] 
+    },
+    11: { title: "Crochet bow", price: "₹99", subMedia: [] },
     12: { price: "₹199", subMedia: [] },
-    13: { price: "₹299", subMedia: [] }
+    13: { price: "₹299", subMedia: [] },
+    14: { title: "Coffee Mug Keychain", price: "₹149", subMedia: [] },
+    15: { 
+        title: "Lavender Stick", 
+        price: "Per piece ₹39 | 10 pieces ₹349", 
+        subMedia: [{ type: 'image', src: 'crochets/crochet15.1.jpg' }] 
+    },
+    16: { title: "Sunflower Hair pin", price: "₹169", subMedia: [] },
+    17: { 
+        title: "Crochet Tote bag + strawberry keychain", 
+        price: "₹849", 
+        subMedia: [{ type: 'image', src: 'crochets/crochet17.1.jpg' }] 
+    },
+    18: { title: "Crochet bow hair clip", price: "₹79", subMedia: [] },
+    19: { title: "Daisy Keychain", price: "₹99", subMedia: [] },
+    20: { title: "Mini bouquet keychain", price: "₹139", subMedia: [] },
+    21: { title: "Crochet hair clutcher", price: "₹179", subMedia: [] }
 };
 
-// Pipe Cleaners Data Mapping (Fixed path for pipeCleaner11.jpg)
+// Pipe Cleaners Data Mapping
 const pipeCleanerData = {
     1: { price: "₹750", subMedia: [] },
     2: { price: "₹350", subMedia: [] },
@@ -51,7 +74,15 @@ const pipeCleanerData = {
     8: { price: "₹159", subMedia: [] },
     9: { price: "₹199", subMedia: [] },
     10: { price: "₹110", subMedia: [] },
-    11: { price: "₹99", subMedia: [] }
+    11: { 
+        price: "₹99", 
+        subMedia: [
+            { type: 'image', src: 'pipe cleaners/pipeCleaner11.1.jpg' },
+            { type: 'image', src: 'pipe cleaners/pipeCleaner11.2.jpg' },
+            { type: 'image', src: 'pipe cleaners/pipeCleaner11.3.jpg' },
+            { type: 'image', src: 'pipe cleaners/pipeCleaner11.4.jpg' }
+        ] 
+    }
 };
 
 // Page Switcher
@@ -103,6 +134,7 @@ const detailVideo = document.getElementById("detailVideo");
 const detailGallery = document.getElementById("detailGallery");
 const gallerySection = document.getElementById("gallerySection");
 const detailPriceTag = document.getElementById("detailPriceTag");
+const detailTitle = document.getElementById("detailTitle");
 const detailInstaBtn = document.getElementById("detailInstaBtn");
 const detailWaBtn = document.getElementById("detailWaBtn");
 
@@ -127,16 +159,23 @@ function openProductDetail(category, id) {
 
     if (category === 'crochet') {
         itemData = crochetData[id] || { price: "", subMedia: [] };
-        baseImgSrc = `crochets/crochet${id}.jpg`;
+        baseImgSrc = itemData.baseImg || `crochets/crochet${id}.jpg`;
         categoryName = "Crochet";
-        targetPhone = crochetPhone; // Uses First Phone Number
+        targetPhone = crochetPhone;
         currentCategory = 'crochets';
     } else {
         itemData = pipeCleanerData[id] || { price: "", subMedia: [] };
-        baseImgSrc = `pipe cleaners/pipeCleaner${id}.jpg`;
+        baseImgSrc = itemData.baseImg || `pipe cleaners/pipeCleaner${id}.jpg`;
         categoryName = "Pipe Cleaner";
-        targetPhone = pipeCleanerPhone; // Uses Second Phone Number
+        targetPhone = pipeCleanerPhone;
         currentCategory = 'pipe-cleaners';
+    }
+
+    if (itemData.title) {
+        detailTitle.innerText = itemData.title;
+        detailTitle.style.display = 'block';
+    } else {
+        detailTitle.style.display = 'none';
     }
 
     detailPriceTag.innerText = itemData.price;
@@ -168,7 +207,8 @@ function openProductDetail(category, id) {
         });
     }
 
-    const waMessage = `Hi Twisty Threads! I would like to inquire about ${categoryName} Item #${id} (${itemData.price}).`;
+    const itemLabel = itemData.title ? `"${itemData.title}"` : `Item #${id}`;
+    const waMessage = `Hi Twisty Threads! I would like to inquire about ${categoryName} ${itemLabel} (${itemData.price}).`;
     detailWaBtn.href = `https://wa.me/${targetPhone}?text=${encodeURIComponent(waMessage)}`;
     detailInstaBtn.href = `https://instagram.com/${instagramHandle}`;
 

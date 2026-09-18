@@ -192,7 +192,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* Larger Middle Logo */
 .hero-logo {
     width: 160px;
     height: 160px;
@@ -216,21 +215,23 @@ body {
     font-weight: 600;
 }
 
-/* Stacked Cream Paper Notes */
 .home-notes-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     width: 100%;
-    max-width: 600px;
-    margin-bottom: 2.5rem;
+    max-width: 650px;
+    margin: 0 auto 2.5rem auto;
 }
 
 .note-card {
-    background: #FDFBF7; /* Cream/Coffee Paper Background */
+    background: #FDFBF7;
     border: 2px solid #E6DEC5;
     border-radius: var(--radius-md);
-    padding: 25px;
+    padding: 25px 30px;
+    width: 100%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
@@ -241,15 +242,17 @@ body {
 
 .note-title {
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: #1A1A1A;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .note-desc {
     font-size: 1rem;
     color: var(--text-body);
     line-height: 1.5;
+    text-align: center;
 }
 
 .hero-showcase-box {
@@ -366,29 +369,46 @@ body {
 }
 
 .card-info {
-    padding: 14px 16px;
+    padding: 12px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 8px;
+    text-align: center;
     background: #FFF;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.item-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-dark);
 }
 
 .price {
     font-weight: 800;
     color: #1A1A1A;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .card-btn {
     background: var(--accent-color);
     border: none;
-    padding: 7px 14px;
-    border-radius: 15px;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    border-radius: 20px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     color: #FFF;
     cursor: pointer;
     transition: var(--transition-standard);
+    margin-top: 2px;
 }
 
 .card-btn:hover {
@@ -425,6 +445,13 @@ body {
     padding: 24px;
     border: 2px solid var(--border-color);
     box-shadow: var(--shadow-soft);
+}
+
+.detail-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: #1A1A1A;
+    margin-bottom: 10px;
 }
 
 .detail-media-wrapper {
@@ -580,43 +607,4 @@ body {
     .hero-title {
         font-size: 3.2rem;
     }
-}/* Centered & Stacked Cream Paper Notes */
-.home-notes-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Horizontally centers the notes */
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto 2.5rem auto; /* Centers the container block itself */
-}
-
-.note-card {
-    background: #FDFBF7; /* Coffee/Cream Paper color */
-    border: 2px solid #E6DEC5;
-    border-radius: var(--radius-md);
-    padding: 25px 30px;
-    width: 100%; /* Spans full container width */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
-    text-align: center; /* Centers inner title and text */
-}
-
-.highlight-note {
-    border-color: var(--accent-color);
-}
-
-.note-title {
-    font-weight: 800;
-    font-size: 1.25rem;
-    color: #1A1A1A;
-    margin-bottom: 8px;
-    text-align: center;
-}
-
-.note-desc {
-    font-size: 1rem;
-    color: var(--text-body);
-    line-height: 1.5;
-    text-align: center;
 }
