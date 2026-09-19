@@ -45,11 +45,6 @@ const crochetData = {
     12: { price: "₹199", subMedia: [] },
     13: { price: "₹299", subMedia: [] },
     14: { title: "Coffee Mug Keychain", price: "₹149", subMedia: [] },
-    15: { 
-        title: "Lavender Stick", 
-        price: "Per piece ₹39 | 10 pieces ₹349", 
-        subMedia: [{ type: 'image', src: 'crochets/crochet15.1.jpg' }] 
-    },
     16: { title: "Sunflower Hair pin", price: "₹169", subMedia: [] },
     17: { 
         title: "Crochet Tote bag + strawberry keychain", 
@@ -82,6 +77,11 @@ const pipeCleanerData = {
             { type: 'image', src: 'pipe cleaners/pipeCleaner11.3.jpg' },
             { type: 'image', src: 'pipe cleaners/pipeCleaner11.4.jpg' }
         ] 
+    },
+    12: { 
+        title: "Lavender Stick", 
+        price: "Per piece ₹39 | 10 pieces ₹349", 
+        subMedia: [{ type: 'image', src: 'pipe cleaners/pipeCleaner12.1.jpg' }] 
     }
 };
 
