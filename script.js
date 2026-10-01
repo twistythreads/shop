@@ -54,7 +54,15 @@ const crochetData = {
     18: { title: "Crochet bow hair clip", price: "₹79", subMedia: [] },
     19: { title: "Daisy Keychain", price: "₹99", subMedia: [] },
     20: { title: "Mini bouquet keychain", price: "₹139", subMedia: [] },
-    21: { title: "Crochet hair clutcher", price: "₹179", subMedia: [] }
+    21: { title: "Crochet hair clutcher", price: "₹179", subMedia: [] },
+    22: { 
+        price: "₹109", 
+        subMedia: [{ type: 'image', src: 'crochets/crochet22.1.jpg' }] 
+    },
+    23: { 
+        price: "₹120", 
+        subMedia: [{ type: 'image', src: 'crochets/crochet23.1.jpg' }] 
+    }
 };
 
 // Pipe Cleaners Data Mapping
