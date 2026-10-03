@@ -90,6 +90,19 @@ const pipeCleanerData = {
         title: "Lavender Stick", 
         price: "Per piece ₹39 | 10 pieces ₹349", 
         subMedia: [{ type: 'image', src: 'pipe cleaners/pipeCleaner12.1.jpg' }] 
+    },
+    13: {
+        price: "₹179",
+        subMedia: [
+            { type: 'image', src: 'pipe cleaners/pipeCleaner13.1.jpg' },
+            { type: 'image', src: 'pipe cleaners/pipeCleaner13.2.jpg' }
+        ]
+    },
+    14: {
+        price: "₹109",
+        subMedia: [
+            { type: 'image', src: 'pipe cleaners/pipeCleaner14.1.jpg' }
+        ]
     }
 };
 
