@@ -62,6 +62,34 @@ const crochetData = {
     23: { 
         price: "₹120", 
         subMedia: [{ type: 'image', src: 'crochets/crochet23.1.jpg' }] 
+    },
+    24: { price: "₹49", subMedia: [] },
+    25: { price: "₹49", subMedia: [] },
+    26: { 
+        title: "car hanging", 
+        price: "₹199", 
+        subMedia: [{ type: 'image', src: 'crochets/crochet26.1.jpg' }] 
+    },
+    27: { 
+        title: "car hanging", 
+        price: "₹149", 
+        subMedia: [{ type: 'image', src: 'crochets/crochet27.1.jpg' }] 
+    },
+    28: { 
+        title: "bouquet keychain", 
+        price: "₹109", 
+        subMedia: [
+            { type: 'image', src: 'crochets/crochet28.1.jpg' },
+            { type: 'image', src: 'crochets/crochet28.2.jpg' }
+        ] 
+    },
+    29: { 
+        title: "sunflower keychain", 
+        price: "₹120", 
+        subMedia: [
+            { type: 'image', src: 'crochets/crochet29.1.jpg' },
+            { type: 'image', src: 'crochets/crochet29.2.jpg' }
+        ] 
     }
 };
 
