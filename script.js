@@ -131,6 +131,13 @@ const pipeCleanerData = {
         subMedia: [
             { type: 'image', src: 'pipe cleaners/pipeCleaner14.1.jpg' }
         ]
+    },
+    15: {
+        price: "₹279",
+        subMedia: [
+            { type: 'image', src: 'pipe cleaners/pipeCleaner15.1.jpg' },
+            { type: 'video', src: 'pipe cleaners/pipeCleaner15.2.mp4' }
+        ]
     }
 };
 
