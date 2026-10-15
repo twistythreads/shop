@@ -90,20 +90,17 @@ const crochetData = {
             { type: 'image', src: 'crochets/crochet29.1.jpg' },
             { type: 'image', src: 'crochets/crochet29.2.jpg' }
         ] 
+    },
+    30: { 
+        title: "Crochet Charger", 
+        price: "₹129", 
+        subMedia: [] 
     }
 };
 
 // Pipe Cleaners Data Mapping
 const pipeCleanerData = {
     1: { price: "₹750", subMedia: [] },
-    2: { price: "₹350", subMedia: [] },
-    3: { price: "₹179", subMedia: [] },
-    4: { price: "₹149", subMedia: [] },
-    5: { price: "₹159", subMedia: [] },
-    6: { price: "₹99", subMedia: [] },
-    7: { price: "₹119", subMedia: [] },
-    8: { price: "₹159", subMedia: [] },
-    9: { price: "₹199", subMedia: [] },
     10: { price: "₹110", subMedia: [] },
     11: { 
         price: "₹99", 
@@ -137,6 +134,18 @@ const pipeCleanerData = {
         subMedia: [
             { type: 'image', src: 'pipe cleaners/pipeCleaner15.1.jpg' },
             { type: 'video', src: 'pipe cleaners/pipeCleaner15.2.mp4' }
+        ]
+    },
+    16: {
+        title: "Pipecleaner hair accessories",
+        price: "₹119",
+        subMedia: []
+    },
+    17: {
+        title: "Rapunzal keychain",
+        price: "₹119",
+        subMedia: [
+            { type: 'image', src: 'pipe cleaners/pipeCleaner17.1.jpg' }
         ]
     }
 };
