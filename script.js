@@ -147,6 +147,27 @@ const pipeCleanerData = {
         subMedia: [
             { type: 'image', src: 'pipe cleaners/pipeCleaner17.1.jpg' }
         ]
+    },
+    18: {
+        title: "Sunflower keychain",
+        price: "₹149",
+        subMedia: [
+            { type: 'image', src: 'pipe cleaners/pipeCleaner18.1.jpg' },
+            { type: 'image', src: 'pipe cleaners/pipeCleaner18.2.jpg' }
+        ]
+    },
+    19: {
+        title: "Flower keychain",
+        price: "₹89",
+        subMedia: []
+    },
+    20: {
+        title: "Mini bouquet",
+        price: "₹279",
+        subMedia: [
+            { type: 'image', src: 'pipe cleaners/pipeCleaner20.1.jpg' },
+            { type: 'image', src: 'pipe cleaners/pipeCleaner20.2.jpg' }
+        ]
     }
 };
 
